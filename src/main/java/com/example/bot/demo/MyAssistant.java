@@ -82,7 +82,9 @@ public class MyAssistant extends TelegramLongPollingBot {
                 case "MONDAY" : lesson="Subject: Big Data \n Time: 10:00-11:15 \n Venue: SPIA: 301\n";
                     System.out.println(lesson);
                     break;
-                case "TUESDAY" :  System.out.println("2ci gun dersleri");
+                case "TUESDAY" : lesson="Subject: History \n   Time: 10:00-11:15 \n   Venue: SPIA: 301\n"+
+                                        "Subject: Electronics \n   Time: 11:30-12:45 \n   Venue: SB: 301 \n";
+                    System.out.println("2ci gun dersleri");
                     break;
                 case "WEDNESDAY" : lesson="Subject: Big Data \n   Time: 10:00-11:15 \n   Venue: SPIA: 301\n" +
                         "Subject: Career \n   Time: 1:15-2:30 \n   Venue: SPIA: 301\n"+
@@ -97,9 +99,12 @@ public class MyAssistant extends TelegramLongPollingBot {
 
                     System.out.println("4ci gun dersleri");
                     break;
-                case "FRIDAY": System.out.println("5ci gun dersleri");
+                case "FRIDAY": lesson="Subject: Operating Systems \n   Time: 2:45-4:00 \n    Venue: SB: 303 \n"+
+                        "Subject: Philosophy \n   Time: 4:15-5:30 \n   Venue: SB: 301 \n";
+
+                    System.out.println("5ci gun dersleri");
                     break;
-                default:
+                default: lesson="Happy Weekend";
                     System.out.println("Happy Weeked");
             }
             message.setChatId(chat_id).setText(lesson);
@@ -108,7 +113,6 @@ public class MyAssistant extends TelegramLongPollingBot {
             } catch (TelegramApiException e) {
                 e.printStackTrace();
             }
-
 
 
 
