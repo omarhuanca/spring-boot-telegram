@@ -93,7 +93,6 @@ public class MyAssistant extends TelegramLongPollingBot {
 
                     break;
                 case "THURSDAY": lesson="Subject: History \n   Time: 10:00-11:15 \n   Venue: SPIA: 301\n" +
-                        "Subject: Career \n   Time: 1:15-2:30 \n   Venue: SPIA: 301\n"+
                         "Subject: Electronics \n   Time: 11:30-12:45 \n   Venue: SB: 301 \n";
 
                     System.out.println("4ci gun dersleri");
