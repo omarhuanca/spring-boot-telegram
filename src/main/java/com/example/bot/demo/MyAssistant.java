@@ -1,12 +1,13 @@
 package com.example.bot.demo;
 
+import org.apache.http.client.HttpClient;
+import org.hibernate.validator.internal.util.privilegedactions.GetMethod;
 import org.telegram.telegrambots.api.methods.send.SendMessage;
 import org.telegram.telegrambots.api.objects.Update;
 import org.telegram.telegrambots.api.objects.replykeyboard.ReplyKeyboardMarkup;
 import org.telegram.telegrambots.api.objects.replykeyboard.buttons.KeyboardRow;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.exceptions.TelegramApiException;
-
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -22,6 +23,8 @@ public class MyAssistant extends TelegramLongPollingBot {
             // Set variables
             String message_text = update.getMessage().getText();
             long chat_id = update.getMessage().getChatId();
+
+
 
 
             SendMessage message = new SendMessage() // Create a message object object
@@ -77,7 +80,7 @@ public class MyAssistant extends TelegramLongPollingBot {
                 day=dayOfWeek.getDayOfWeek().plus(1).toString();
             String lesson=null;
 
-            switch (  day) {
+            switch ( day) {
 
                 case "MONDAY" : lesson="Subject: Big Data \n Time: 10:00-11:15 \n Venue: SPIA: 301\n";
                     System.out.println(lesson);
