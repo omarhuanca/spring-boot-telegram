@@ -14,18 +14,12 @@ import java.util.List;
 
 public class MyAssistant extends TelegramLongPollingBot {
 
-
     public void onUpdateReceived(Update update) {
-
-
         // We check if the update has a message and the message has text
         if (update.hasMessage() && update.getMessage().hasText()) {
             // Set variables
             String message_text = update.getMessage().getText();
             long chat_id = update.getMessage().getChatId();
-
-
-
 
             SendMessage message = new SendMessage() // Create a message object object
                     .setChatId(chat_id)
@@ -71,7 +65,6 @@ public class MyAssistant extends TelegramLongPollingBot {
                 e.printStackTrace();
             }
 
-
             String day=null;
             LocalDate dayOfWeek = LocalDate.now();
             if (message_text.equals("lectures") )
@@ -81,7 +74,6 @@ public class MyAssistant extends TelegramLongPollingBot {
             String lesson=null;
 
             switch ( day) {
-
                 case "MONDAY" : lesson="Subject: Big Data \n Time: 10:00-11:15 \n Venue: SPIA: 301\n";
                     System.out.println(lesson);
                     break;
@@ -116,20 +108,14 @@ public class MyAssistant extends TelegramLongPollingBot {
             } catch (TelegramApiException e) {
                 e.printStackTrace();
             }
-
-
-
-
-
         }
-
     }
 
     public String getBotUsername() {
-        return "tell4medaylynotes_bot";
+        return "BroadcastFlaskBot";
     }
 
     public String getBotToken() {
-        return   "465456769:AAErcXblY9XLhtWI1iZZ5_rHd2IXPIeJW6Q";
+        return   "1775773146:AAFS6Xtylvv2CQNiRowGGQDL6zdipFZQ0lc";
     }
 }

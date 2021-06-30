@@ -9,20 +9,20 @@ import org.telegram.telegrambots.exceptions.TelegramApiException;
 @SpringBootApplication
 public class DemoApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(DemoApplication.class, args);
+  public static void main(String[] args) {
+    SpringApplication.run(DemoApplication.class, args);
 
-		// Initialize Api Context
-		ApiContextInitializer.init();
+    // Initialize Api Context
+    ApiContextInitializer.init();
 
-		// Instantiate Telegram Bots API
-		TelegramBotsApi botsApi = new TelegramBotsApi();
+    // Instantiate Telegram Bots API
+    TelegramBotsApi botsApi = new TelegramBotsApi();
 
-		// Register our bot
-		try {
-			botsApi.registerBot(new MyAssistant());
-		} catch (TelegramApiException e) {
-			e.printStackTrace();
-		}
-	}
+    // Register our bot
+    try {
+      botsApi.registerBot(new MyAssistant());
+    } catch (TelegramApiException e) {
+      e.printStackTrace();
+    }
+  }
 }
